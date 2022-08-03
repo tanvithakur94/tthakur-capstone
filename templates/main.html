@@ -1,0 +1,37 @@
+<p>
+    <head>
+    <style>
+      h1 {font-size: 90px; text-align: center; font-family: "Garamond"; color: black;}
+      h2 {font-family: "Garamond"; font-size: 30px; font-weight: bold;}
+      h3 {font-family: "Garamond"; font-size: 15px;}
+      label {font-size: 40px; font-weight: 400; font-family: "Brush Script MT", cursive;}
+      input {font-size: 20px; font-family: "Garamond"; text-align: center;}
+      button {text-align: center; font-size: 25px; font-family: "Garamond";}
+      .backgroundImage 
+      {
+       background-image: url("https://media4.giphy.com/media/lnPhJo0JTp57O/giphy.gif");
+       background-position: center;
+       background-repeat: repeat;
+       background-color: white;
+       }
+    </style>
+    <link rel='stylesheet' href='main_css.css'>
+    </head>
+</p>  
+
+    <div class="backgroundImage"/>
+    
+    <h1>CAPTCHA DECODER</h1></div>
+      
+    <form action="{{ url_for("decode")}}" method="post" enctype="multipart/form-data">
+      
+    <center><label for="input">~ Select File ~</label>
+    <h3>Rename your file to 'image.png' before uploading.</h3><br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type='file' name="file" onchange="document.getElementById('input').src = window.URL.createObjectURL(this.files[0])"/><br><br>
+    <img id="input" width="200" height="50"><br><br>
+    
+    <button type="submit" value="Upload">Submit</button></form>
+    
+    <h2>{{output}}</h2></center>
+
+    <div class="backgroundImage"/><br><br><br><br><br><br><br><br><br><br><br><br></div>
